@@ -1,8 +1,14 @@
 local shell = require("shell");
 
-shell.execute('rm /boot/06_string_extentions.lua');
+local args = {...};
+local installDir = "";
+if args[1] then
+    installDir = args[1];
+end
 
-shell.execute('rm /usr/lib/json.lua');
+shell.execute('rm ' .. installDir .. '/boot/06_string_extentions.lua');
 
-shell.execute('cp -r ./boot/* /boot/');
-shell.execute('cp -r ./lib/* /usr/lib/');
+shell.execute('rm ' .. installDir .. '/usr/lib/json.lua');
+
+shell.execute('cp -r ./boot/* ' .. installDir .. '/boot/');
+shell.execute('cp -r ./lib/* ' .. installDir .. '/usr/lib/');
