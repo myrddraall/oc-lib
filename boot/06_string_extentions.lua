@@ -1,4 +1,4 @@
 local match = string.match;
-function string:trim()
-    return match(self,'^()%s*$') and '' or match(self,'^%s*(.*%S)');
+string.trim = function (str)
+    return match(str,'^()%s*$') and '' or match(str,'^%s*(.*%S)');
 end
