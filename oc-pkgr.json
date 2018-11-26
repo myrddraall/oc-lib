@@ -1,7 +1,11 @@
 {
     "name": "oc-lib",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "githubrepo": "myrddraall/oc-lib",
-    "description": ""
+    "description": "",
+    "install": {
+        "lib/": "lib/*",
+        "/boot/": "boot/*"
+    }
 
 }
